@@ -12,17 +12,11 @@ def __scraping_uniprot(UniEntryNumber):
         url = urllib.request.urlopen(link).read()
     except HTTPError:
         text = "HTTP_ERROR: Page not found!\nPlease check your 'Uniprot Entry Number'"
-    except ModuleNotFoundError:
-        text = "MODULE_ERROR: Modules not found!\nIt requires 'urllib.request' and 'urllib.error'\nPlease install the required modules"
     except URLError:
         text = "URL_ERROR: No network connection!\n Please check your internet connection"
     else:
-        try:
-            scrape = bs4.BeautifulSoup(url, "lxml")
-        except ModuleNotFoundError:
-            text = "MODULE_ERROR: Modules not found!\nIt requires 'bs4'\nPlease install the required modules"
-        else:
-            text = scrape.get_text()
+        scrape = bs4.BeautifulSoup(url, "lxml")
+        text = scrape.get_text()
     return text
 
 def get_with_header(UniEntryNumber):
