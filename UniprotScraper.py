@@ -2,6 +2,10 @@ import bs4
 import urllib.request
 from urllib.error import HTTPError, URLError
 
+#__co-authors__: Team_Enicma; Bilgehan Nevruz, Melih Temel, Umut Durak, Özgür Can Arıcan
+#__contact__: www.github.com/TEAM-ENICMA, teamenicma@gmail.com
+#__version__: UniprotScraper v_1.0
+
 def __scraping_uniprot(UniEntryNumber):
     link = "https://www.uniprot.org/uniprot/" + UniEntryNumber + ".fasta"
     try:
