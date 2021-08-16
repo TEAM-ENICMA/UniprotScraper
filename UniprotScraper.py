@@ -31,20 +31,30 @@ def get_with_header(UniEntryNumber):
 
 def get_without_header(UniEntryNumber):
     content = __scraping_uniprot(UniEntryNumber)
+    if content[:4] == "HTTP" or content[:4] == "URL_":
+        return content
     return "\n".join(content.splitlines()[1:])
 
 def get_only_header(UniEntryNumber):
     content = __scraping_uniprot(UniEntryNumber)
+    if content[:4] == "HTTP" or content[:4] == "URL_":
+        return content
     return content.splitlines()[0]
 
 def get_first_three_aa(UniEntryNumber):
     content = __scraping_uniprot(UniEntryNumber)
+    if content[:4] == "HTTP" or content[:4] == "URL_":
+        return content
     return content.splitlines()[1][:3]
 
 def get_first_five_aa(UniEntryNumber):
     content = __scraping_uniprot(UniEntryNumber)
+    if content[:4] == "HTTP" or content[:4] == "URL_":
+        return content
     return content.splitlines()[1][:5]
 
 def get_first_ten_aa(UniEntryNumber):
     content = __scraping_uniprot(UniEntryNumber)
+    if content[:4] == "HTTP" or content[:4] == "URL_":
+        return content
     return content.splitlines()[1][:10]
