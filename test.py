@@ -17,3 +17,6 @@ print(five_aa)
 
 ten_aa = us.get_first_ten_aa("P04418")
 print(ten_aa)
+
+content_aa = us.get_aa_content("P04418")
+print(content_aa)
