@@ -12,26 +12,10 @@ with pip:
 pip install UniprotScraper
 ```
 
-## Requirements
-
-Uniprotscraper uses some modules that need to be installed to your system;
-
-1) bs4(BeautifulSoup)
-2) urllib.request
-3) urllib.error
-
-with pip:
+for latest version:
 
 ```bash
-pip install bs4
-```
-
-```bash
-pip install urllib.request
-```
-
-```bash
-pip install urllib.error
+pip install UniprotScraper --upgrade
 ```
 
 ## Usage
@@ -121,6 +105,19 @@ print(ten_aa)
 Output:
 ```python
 MTRINLTLVS
+```
+
+Get amino acid composition,
+
+Input:
+```python
+content_aa = us.get_aa_content("P04418")
+print(content_aa)
+```
+
+Output:
+```python
+{'M': 2, 'T': 7, 'R': 12, 'I': 13, 'N': 3, 'L': 11, 'V': 7, 'S': 5, 'E': 9, 'A': 12, 'D': 8, 'Q': 6, 'H': 4, 'Y': 7, 'P': 5, 'F': 8, 'G': 7, 'K': 10, '\n': 2, 'C': 1, 'W': 1}
 ```
 
 ## License
