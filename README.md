@@ -24,9 +24,6 @@ Get FASTA file of protein that entered Uniprot Entry Number,
 
 Input:
 ```python
-import bs4
-import urllib.request
-from urllib.error import HTTPError, URLError
 import UniprotScraper as us
 
 fasta = us.get_with_header("P04418")
