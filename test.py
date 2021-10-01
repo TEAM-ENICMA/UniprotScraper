@@ -1,22 +1,45 @@
 import UniprotScraper as us
 
-fasta = us.get_with_header("P04418")
-print(fasta)
+uni_id = "P04418"
 
-sequence = us.get_without_header("P04418")
-print(sequence)
+ident = us.get_identification(uni_id)
+print(ident)
 
-header = us.get_only_header("P04418")
-print(header)
+access = us.get_accession(uni_id)
+print(access)
 
-three_aa = us.get_first_three_aa("P04418")
-print(three_aa)
+date = us.get_date(uni_id)
+print(date)
 
-five_aa = us.get_first_five_aa("P04418")
-print(five_aa)
+desc = us.get_description(uni_id)
+print(desc)
 
-ten_aa = us.get_first_ten_aa("P04418")
-print(ten_aa)
+spec = us.get_species(uni_id)
+print(spec)
 
-content_aa = us.get_aa_content("P04418")
-print(content_aa)
+classif = us.get_classification(uni_id)
+print(classif)
+
+tax = us.get_taxonomy_ref(uni_id)
+print(tax)
+
+info = us.get_information(uni_id)
+print(info)
+
+head = us.get_seq_header(uni_id)
+print(head)
+
+seq = us.get_sequence(uni_id)
+print(seq)
+
+first_three = us.get_first_three_aa(uni_id)
+print(first_three)
+
+first_five = us.get_first_five_aa(uni_id)
+print(first_five)
+
+first_ten = us.get_first_ten_aa(uni_id)
+print(first_ten)
+
+aa_content = us.get_aa_content(uni_id)
+print(aa_content)
