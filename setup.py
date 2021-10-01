@@ -3,13 +3,13 @@ import setuptools
 setup(
   name = 'UniprotScraper',         
   packages = ['UniprotScraper'],   
-  version = '0.2',     
+  version = '0.3',     
   license='MIT',        
-  description = 'UniprotScraper is a web scraper tool that specialized for Uniprot Database.',
+  description = 'UniprotScraper is a web scraping tool that specialized for Uniprot Database.',
   author = 'team_enicma',                  
   author_email = 'teamenicma@gmail.com',      
   url = 'https://github.com/TEAM-ENICMA/UniprotScraper',
-  download_url = 'https://github.com/TEAM-ENICMA/UniprotScraper/archive/refs/tags/v0.2.tar.gz',
+  download_url = 'https://github.com/TEAM-ENICMA/UniprotScraper/archive/refs/tags/v0.3.tar.gz',
   keywords = ['Python', 'Bioinformatics', 'WebScraping', 'ComputationalBiology', 'Uniprot'],
   install_requires=[
           'requests'
